@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://akcow.github.io/mianshi-index-site/sitemap.xml

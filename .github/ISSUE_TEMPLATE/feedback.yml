@@ -1,0 +1,48 @@
+name: 内容反馈
+description: 某道题、某个分类或某一页有问题，或者想补充内容。有 GitHub 账号就行。
+title: "[内容反馈] "
+labels: ["内容反馈"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        谢谢帮忙看错。能指出「现在写的是什么、你觉得应该是什么」，改起来最快。
+
+        没有 GitHub 账号也不用绕：站点每页底部的反馈区有「复制反馈内容」，复制后发到公众号后台或邮箱都行。
+  - type: input
+    id: page
+    attributes:
+      label: 页面链接
+      description: 浏览器地址栏那一串，直接粘过来。
+      placeholder: https://akcow.github.io/mianshi-index-site/...
+    validations:
+      required: true
+  - type: dropdown
+    id: kind
+    attributes:
+      label: 属于哪一类
+      options:
+        - 答案或踩分点有错
+        - 分类放错了
+        - 和另一道题重复
+        - 想补充一道题
+        - 页面排版问题
+        - 其他
+    validations:
+      required: true
+  - type: textarea
+    id: detail
+    attributes:
+      label: 具体哪里不对
+      description: 有题面原话最好，一条一行。
+      placeholder: |
+        题目：...
+        现在写的是：...
+        我觉得应该是：...
+    validations:
+      required: true
+  - type: input
+    id: contact
+    attributes:
+      label: 联系方式（可选）
+      description: 留邮箱或微信，改完可以回你一声。
